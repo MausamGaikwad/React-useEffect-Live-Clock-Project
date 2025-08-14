@@ -22,13 +22,16 @@ Clone the repository:
 git clone https://github.com/yourusername/character-counter-app.git
 ```
 Navigate to the project directory:
-```cd character-counter-app
+```
+cd character-counter-app
 ```
 Install dependencies:
-```npm install
+```
+npm install
 ```
 Run the development server:
-```npm run dev
+```
+npm run dev
 ```
 
 ---
