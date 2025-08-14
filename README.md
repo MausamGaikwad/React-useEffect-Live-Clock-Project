@@ -1,40 +1,71 @@
-# Character Counter App
+## 🕒 Live Clock Tracker
 
-A simple and interactive React application that allows users to count characters in real time as they type. This project demonstrates the use of the useEffect hook to dynamically track and display the character count.
+A simple and elegant React application that displays the current time and updates every second using useEffect and useState. This project demonstrates React Hooks, side effects, and cleanup functions.
 
 ---
 ## 📌 Features
-* Real-time character count display
-* Responsive and clean UI
-* Dynamic updates using React's useEffect hook
-* Easy to use and lightweight
----
-## 🛠️ Technologies Used
-* React.js – Frontend library
-* JavaScript (ES6+) – Core logic
-* CSS – Styling
-* Vercel – Deployment
----
-## 📂 Project Setup
+* Live Time Update — Displays the current time in real-time.
+* Automatic Refresh — Updates every second without page reload.
+* Cleanup Handling — Properly clears the timer to prevent memory leaks.
+* Minimal & Responsive Design — Simple UI with central alignment.
 
-Clone the repository:
+---
+## 🛠️ Tech Stack
+* React (Hooks: useState, useEffect)
+* JavaScript (ES6)
+* CSS Inline Styling
+
+---
+## 📂 Project Structure
 ```
-git clone https://github.com/yourusername/character-counter-app.git
+src/
+ ├── App.js         # Main React component
+ ├── index.js       # Entry point for ReactDOM rendering
+ └── index.css      # Global styles (optional)
 ```
-Navigate to the project directory:
+
+---
+## 🚀 Getting Started
+1️⃣ Clone the repository
 ```
-cd character-counter-app
+git clone https://github.com/yourusername/live-clock-tracker.git
+cd live-clock-tracker
 ```
-Install dependencies:
+2 Install dependencies
 ```
 npm install
 ```
-Run the development server:
+3 Run the application
 ```
 npm run dev
 ```
+---
+
+## 📖 How It Works
+
+1 State Initialization:
+```
+const [time, setTime] = useState(new Date().toLocaleTimeString());
+```
+Stores the current time as a state variable.
+
+2 useEffect with setInterval:
+  * Creates a timer that updates the time every second.
+  * Returns a cleanup function to clear the interval when the component unmounts.
+
+3 Rendering:
+  * Displays the current time in a large, centered format.
 
 ---
-## 📄 License
+## 🧹 Cleanup Importance
+```
+return () => {
+  clearInterval(intervalId);
+  console.log("🧹 Interval cleared!");
+};
+```
+Ensures no unnecessary timers run after the component is removed.
 
-This project is open source and available under the MIT License.
+---
+## 📜 License
+This project is open-source and available under the MIT License.
