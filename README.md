@@ -28,7 +28,7 @@ src/
 ## 🚀 Getting Started
 1️⃣ Clone the repository
 ```
-git clone https://github.com/yourusername/live-clock-tracker.git
+git clone https://github.com/MausamGaikwad/React-useEffect-Live-Clock-Project.git
 cd live-clock-tracker
 ```
 2 Install dependencies
